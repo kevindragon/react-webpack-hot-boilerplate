@@ -1,0 +1,29 @@
+
+.search-bar {
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px 10px;
+  border-bottom: 1px solid $lineColoe;
+}
+
+.search-bar {
+  .search-input, .write {
+    float: left;
+  }
+
+  .search-input {
+    flex: 0 4 100%;
+    margin-right: 10px;
+
+    input {
+      background: #efefef;
+      border-radius: 40px;
+      width: 100%;
+    }
+  }
+
+  .write {
+    width: 40px;
+    flex: 1;
+  }
+}

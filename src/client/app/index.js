@@ -1,16 +1,17 @@
-require('./css/style.css');
+require('./scss/style.scss');
 
 import React from 'react';
 import {render} from 'react-dom';
 import SearchBar from './components/SearchBar';
-import Footer from './Footer';
+import Footer from './components/Footer';
+import MessageList from './components/MessageList';
 
 class App extends React.Component {
   render () {
     return (
       <div>
-        <p>Hello React!</p>
         <SearchBar />
+        <MessageList />
         <Footer />
       </div>
     );
