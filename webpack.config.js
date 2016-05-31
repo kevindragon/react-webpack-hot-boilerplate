@@ -9,7 +9,7 @@ var config = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080',
     'webpack/hot/only-dev-server',
-    APP_DIR + '/index.jsx'
+    APP_DIR + '/index.js'
   ],
   output: {
     publicPath: "/public/",
@@ -19,7 +19,7 @@ var config = {
   devServer: {
     contentBase: "./src/client/",
     inline: true,
-    hot: true, 
+    hot: true,
     port: 8080
   },
   module : {
@@ -29,7 +29,11 @@ var config = {
         include: APP_DIR,
         exclude: /node_modules/,
         loaders: ['react-hot', 'babel']
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      },
     ]
   },
   plugins: [
