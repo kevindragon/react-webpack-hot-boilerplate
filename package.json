@@ -4,8 +4,7 @@
   "description": "YouKe",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "webpack-dev-server",
+    "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
